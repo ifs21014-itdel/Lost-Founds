@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:menuCategory="container">
+        <item
+            android:id="@+id/mainMenuProfile"
+            android:title="Profile"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/mainMenuLogout"
+            android:title="Logout"
+            app:showAsAction="never" />
+        <item
+            android:id ="@+id/mylostfound"
+            android:title="My Lost Found"
+            app:showAsAction="never"/>
+        <item
+            android:id ="@+id/alllostfound"
+            android:title="All Lost Found"
+            app:showAsAction="never"/>
+    </group>
+</menu>
