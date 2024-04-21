@@ -18,6 +18,9 @@
             android:name=".presentation.profile.ProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.lostfound.LostFoundFavoriteActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.register.RegisterActivity"
             android:exported="false" />
         <activity
