@@ -46,12 +46,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/ivLostFoundDetailCover"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="12dp"
-                    app:srcCompat="@drawable/picture" />
+                    app:srcCompat="@drawable/ic_image_24" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

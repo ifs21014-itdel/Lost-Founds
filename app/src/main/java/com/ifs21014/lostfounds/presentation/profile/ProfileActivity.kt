@@ -2,6 +2,7 @@ package com.ifs21014.lostfounds.presentation.profile
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -12,11 +13,13 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.bumptech.glide.Glide
 import com.ifs18005.delcomtodo.data.remote.response.DataUserResponse
+import com.ifs21014.lostfounds.BuildConfig
 import com.ifs21014.lostfounds.R
 import com.ifs21014.lostfounds.data.remote.MyResult
 import com.ifs21014.lostfounds.data.repository.AuthRepository
 import com.ifs21014.lostfounds.data.repository.UserRepository
 import com.ifs21014.lostfounds.databinding.ActivityProfileBinding
+import com.ifs21014.lostfounds.helper.Utils.Companion.observeOnce
 import com.ifs21014.lostfounds.presentation.ViewModelFactory
 import com.ifs21014.lostfounds.presentation.login.LoginActivity
 
@@ -45,6 +48,12 @@ class ProfileActivity : AppCompatActivity() {
             ivProfileBack.setOnClickListener {
                 finish()
             }
+            btnEditProfile.setOnClickListener {
+                // Memulai ProfileManageActivity
+                startActivity(Intent(this@ProfileActivity, ProfileManageActivity::class.java))
+            }
+
+
         }
     }
 
@@ -82,13 +91,20 @@ class ProfileActivity : AppCompatActivity() {
     private fun loadProfileData(profile: DataUserResponse){
         binding.apply {
 
+//            Log.i("dedi","https://public-api.delcom.org/" + profile.user.photo )
+
+
             if(profile.user.photo != null){
-                val urlImg = "https://public-api.delcom.org/${profile.user.photo}"
+                ivProfile.visibility = View.VISIBLE
+
                 Glide.with(this@ProfileActivity)
-                    .load(urlImg)
+                    .load("https://public-api.delcom.org/" + profile.user.photo)
                     .placeholder(R.drawable.ic_person)
                     .into(ivProfile)
+            }else{
+                ivProfile.visibility = View.GONE
             }
+
 
             tvProfileName.text = profile.user.name
             tvProfileEmail.text = profile.user.email

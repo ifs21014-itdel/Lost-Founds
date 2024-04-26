@@ -38,7 +38,6 @@
             android:paddingEnd="15dp"
             android:paddingBottom="50dp">
 
-
             <TextView
                 android:id="@+id/tvLostFoundManageLabelTitle"
                 android:layout_width="wrap_content"
@@ -87,14 +86,14 @@
                 android:background="@drawable/rounded_border"/>
 
             <ImageView
-                android:id="@+id/ivSelectedImage"
+                android:id="@+id/ivLostFoundManageCover"
                 android:layout_width="300dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etLostFoundManageDesc"
-                app:srcCompat="@drawable/picture" />
+                app:srcCompat="@drawable/ic_image_24" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -104,7 +103,7 @@
                 android:text="Post Status"
                 app:layout_constraintBottom_toTopOf="@+id/etLostFoundManageStatus"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnLostFoundPicture" />
+                app:layout_constraintTop_toBottomOf="@+id/btnLostFoundManageCamera" />
 
             <Spinner
                 android:id="@+id/etLostFoundManageStatus"
@@ -141,15 +140,26 @@
                 app:layout_constraintTop_toTopOf="@+id/btnLostFoundManageSave" />
 
             <Button
-                android:id="@+id/btnLostFoundPicture"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnLostFoundManageCamera"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Pilih Gambar"
+                android:text="Kamera"
+                app:cornerRadius="2pt"
+                app:layout_constraintEnd_toStartOf="@+id/btnLostFoundManageGallery"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivLostFoundManageCover" />
+
+            <Button
+                android:id="@+id/btnLostFoundManageGallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pilih dari Galery"
                 app:cornerRadius="2pt"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivSelectedImage" />
+                app:layout_constraintStart_toEndOf="@+id/btnLostFoundManageCamera"
+                app:layout_constraintTop_toBottomOf="@+id/ivLostFoundManageCover" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

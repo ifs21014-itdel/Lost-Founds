@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.ifs18005.delcomtodo.data.remote.response.LostFoundsItemResponse
 import com.ifs21014.lostfounds.databinding.ItemRowLostfoundBinding
+
 
 class LostFoundsAdapter :
     ListAdapter<LostFoundsItemResponse,
@@ -69,6 +71,11 @@ class LostFoundsAdapter :
                 }
                 // Menetapkan teks status yang sudah disorot ke TextView
                 tvStatus.text = statusText
+                data.cover?.let { coverUrl ->
+                    Glide.with(itemView)
+                        .load(coverUrl)
+                        .into(ivLostFoundItem)
+                }
             }
         }
 
