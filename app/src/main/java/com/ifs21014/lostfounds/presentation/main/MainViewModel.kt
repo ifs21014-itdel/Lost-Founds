@@ -34,12 +34,17 @@ class MainViewModel(
         }
     }
 
-    fun getTodos(): LiveData<MyResult<DelcomLostFoundsResponse>> {
-        return lostFoundRepository.getAll(null, 1, null).asLiveData()
+    fun getTodos(
+        isCompleted: Int?,
+        isMe: Int?,
+        status: String?,
+    ): LiveData<MyResult<DelcomLostFoundsResponse>> {
+        return lostFoundRepository.getAll(
+            isCompleted,
+            isMe,
+            status,).asLiveData()
     }
-    fun getAllTodos(): LiveData<MyResult<DelcomLostFoundsResponse>> {
-        return lostFoundRepository.getAll(null, 0, null).asLiveData()
-    }
+
 
     fun putTodo(
         lostfoundId: Int,

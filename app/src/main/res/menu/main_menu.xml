@@ -12,16 +12,20 @@
             android:title="Logout"
             app:showAsAction="never" />
         <item
-            android:id ="@+id/mylostfound"
-            android:title="My Lost Found"
-            app:showAsAction="never"/>
-        <item
-            android:id ="@+id/alllostfound"
-            android:title="All Lost Found"
-            app:showAsAction="never"/>
-        <item
             android:id="@+id/mainMenuFavoriteTodos"
             android:title="Favorite "
             app:showAsAction="never" />
     </group>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_align_horizontal_left_24"
+        android:title="Item"
+        android:id="@+id/modal"
+        app:showAsAction="ifRoom" />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Item" />
+
 </menu>

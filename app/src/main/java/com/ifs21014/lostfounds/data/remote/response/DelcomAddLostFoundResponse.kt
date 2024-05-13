@@ -16,6 +16,6 @@ data class DelcomAddLostFoundResponse(
 
 data class DataAddLostFoundResponse(
 
-	@field:SerializedName("todo_id")
+	@field:SerializedName("lost_found_id")
 	val todoId: Int
 )
