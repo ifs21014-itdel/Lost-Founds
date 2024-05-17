@@ -18,7 +18,7 @@
             android:id="@+id/appbarLostFoundManage"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#B0926A"
+            android:background="#AD88C6"
             app:navigationIcon="@drawable/ic_arrow_back_24"
             app:navigationIconTint="@color/white"
             app:title="Tambah Todo"
@@ -141,25 +141,29 @@
 
             <Button
                 android:id="@+id/btnLostFoundManageCamera"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="4dp"
                 android:text="Kamera"
-                app:cornerRadius="2pt"
+                app:cornerRadius="2dp"
                 app:layout_constraintEnd_toStartOf="@+id/btnLostFoundManageGallery"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivLostFoundManageCover" />
 
             <Button
                 android:id="@+id/btnLostFoundManageGallery"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="4dp"
                 android:text="Pilih dari Galery"
-                app:cornerRadius="2pt"
+                app:cornerRadius="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btnLostFoundManageCamera"
                 app:layout_constraintTop_toBottomOf="@+id/ivLostFoundManageCover" />
+
+
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

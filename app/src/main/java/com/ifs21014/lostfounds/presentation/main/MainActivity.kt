@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.mainMenuFavoriteTodos -> {
+                R.id.love -> {
                     openFavoriteLostFoundActivity()
                     true
                 }
